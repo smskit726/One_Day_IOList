@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+@charset "UTF-8";
+
+html,
+body {
+  width: 100%;
+  height: 100%
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: relative;
+  height: 400px;
+  background-image: url("../images/의류.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header h2 {
+  font-weight: 500;
+  color: white;
+}
+
+section#main-section {
+	height: 100%;
+}
+
+table#product-list {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 90%;
+  border: 1px solid #aaa;
+  margin: 30px auto;
+}
+
+table#product-list th,
+table#product-list td {
+  border: 1px solid #aaaa;
+  padding: 8px;
+  text-align: center;
+  vertical-align: top;
+}
+
+table#product-list th {
+	background-color : honeydew;
+	color: black;
+}
+
+table#product-list td {
+  cursor: pointer;
+}
+
+table#product-list tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+table#product-list tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+table#product-list tr:nth-child(n+2):hover {
+	background-color: #ddd;
+}
+
+
+div#new-write {
+	width: 90%;
+	margin: 0 auto;
+	padding: 10px;
+	text-align: right;
+}
+div#new-write a {
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	background-color: rgb(236, 186, 186);
+	color: brown;
+	font-size:15px;
+	padding: 10px;
+	cursor: pointer;
+	text-decoration: none;
+	
+}
+
+div#new-write a:hover {
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+
+footer {
+  background-color: brown;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}

@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+form#product {
+  width: 60%;
+  margin: 10px auto;
+}
+
+form#product div {
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
+}
+
+form#product label {
+  flex: 1;
+  text-align: right;
+  padding: 8px;
+  margin: 5px;
+}
+
+form#product div.hidden {
+	display: none;
+}
+
+form#product input, form#product select {
+  /*
+		만약 input box와 button등 다른 tag를 한줄에 나란히 놓으면서 input box의 width를 임의로 설정하고 싶으면
+		display를 inline-block으로 설정하자!
+		block으로 설정하면 width는 임의로 설정할 수 있지만 다른 tag를 오른쪽에 위치하게 할수 없다.
+		기본값인 inline이면 width를 설정할 수 없다.
+	*/
+  flex: 5;
+  border: 1px solid #ddd;
+  margin: 5px;
+  padding: 8px;
+}
+
+form#product fieldset {
+  border: 1px solid rgb(0, 100, 200);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+form#product #title {
+  width: 70%;
+}
+
+form#product div.btn-box {
+  justify-content: flex-end;
+}
+
+form#product button {
+  border: none;
+  outline: 0;
+  padding: 0.5rem 12px;
+  border-radius: 5px;
+}
+
+form#product button#btn-save {
+  background-color: rgb(236, 186, 186);
+  color: brown;
+  padding: 0.5rem 25px;
+}
+
+form#product button:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
