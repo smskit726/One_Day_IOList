@@ -9,6 +9,12 @@
 <form:form id="product" modelAttribute="PROVO">
 	<fieldset>
 		<legend>상품매입매출</legend>
+		
+			<div class="hidden">
+				<label for="seq"></label>
+				<form:input path="seq" type="hidden"/>
+			</div>
+		
 			<div class="hidden">
 				<label for="io_date"></label>
 				<form:input path="io_date" type="hidden"/>

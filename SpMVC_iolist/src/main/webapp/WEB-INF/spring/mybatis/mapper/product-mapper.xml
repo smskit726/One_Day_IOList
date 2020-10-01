@@ -9,7 +9,9 @@
  			SELECT * FROM tbl_iolist ORDER BY io_date, io_time
  	</select>
  	
- 	<select id="findById"></select>
+ 	<select id="findById" resultType="ProductVO">
+ 	  		SELECT * FROM tbl_iolist WHERE seq = #{id}
+ 	</select>
  	
  	<insert id="insert">
  			INSERT INTO tbl_iolist (
@@ -22,19 +24,30 @@
 						io_quan,
 						io_total
  			) VALUES (
- 			seq_iolist.NEXTVAL,
-			#{io_date},
-			#{io_time},
-			#{io_pname},
-			#{io_input},
-			#{io_price},
-			#{io_quan},
-			#{io_total}
- 			)
+			 			seq_iolist.NEXTVAL,
+						#{io_date},
+						#{io_time},
+						#{io_pname},
+						#{io_input},
+						#{io_price},
+						#{io_quan},
+						#{io_total}
+			 			)
  			
  	</insert>
  	
- 	<update id="update"></update>
- 	<delete id="delete"></delete>
+ 	<update id="update">
+ 			UPDATE tbl_iolist SET 
+						io_pname = #{io_pname, jdbcType=VARCHAR},
+						io_input = #{io_input, jdbcType=VARCHAR},
+						io_price = #{io_price, jdbcType=VARCHAR},
+						io_quan = #{io_quan, jdbcType=VARCHAR},
+						io_total = #{io_total, jdbcType=VARCHAR}
+ 			WHERE seq = #{seq, jdbcType=VARCHAR}
+ 	</update>
+ 	
+ 	<delete id="delete">
+ 			DELETE tbl_iolist WHERE seq = #{id}
+ 	</delete>
  
  </mapper> 

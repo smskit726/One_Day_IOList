@@ -1,11 +1,9 @@
 @charset "UTF-8";
 
-@charset "UTF-8";
-
 html,
 body {
   width: 100%;
-  height: 100%
+  height: 100%;
 }
 
 * {
@@ -35,7 +33,7 @@ header h2 {
 }
 
 section#main-section {
-	height: 100%;
+  height: 100%;
 }
 
 table#product-list {
@@ -55,11 +53,11 @@ table#product-list td {
 }
 
 table#product-list th {
-	background-color : honeydew;
-	color: black;
+  background-color: honeydew;
+  color: black;
 }
 
-table#product-list td {
+table#product-list tr:nth-child(n + 2):nth-last-child(n + 2) {
   cursor: pointer;
 }
 
@@ -71,32 +69,34 @@ table#product-list tr:nth-child(odd) {
   background-color: #fff;
 }
 
-table#product-list tr:nth-child(n+2):hover {
-	background-color: #ddd;
+table#product-list tr:nth-last-child(1) {
+  background-color: honeydew;
 }
 
+table#product-list tr:nth-child(n + 2):nth-last-child(n + 2):hover {
+  background-color: #ddd;
+}
 
 div#new-write {
-	width: 90%;
-	margin: 0 auto;
-	padding: 10px;
-	text-align: right;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: right;
 }
 div#new-write a {
-	border: none;
-	border-radius: 5px;
-	outline: none;
-	background-color: rgb(236, 186, 186);
-	color: brown;
-	font-size:15px;
-	padding: 10px;
-	cursor: pointer;
-	text-decoration: none;
-	
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: rgb(236, 186, 186);
+  color: brown;
+  font-size: 15px;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 div#new-write a:hover {
-	box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 footer {

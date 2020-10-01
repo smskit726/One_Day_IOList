@@ -7,8 +7,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<link href="${rootPath}/static/css/index.css?ver=0929_3"
+<link href="${rootPath}/static/css/index.css?ver=1001_2"
 	rel="stylesheet">
+<script>var rootPath = "${rootPath}"</script>
 <title>Loo9 Shop</title>
 </head>
 <body>
@@ -23,6 +24,9 @@
 			</c:when>
 			<c:when test="${BODY =='PRO-WRITE'}">
 				<%@ include file="/WEB-INF/views/product/pro-write.jsp"%>
+			</c:when>
+			<c:when test="${BODY == 'PRO-DETAIL'}">
+				<%@ include file ="/WEB-INF/views/product/pro-detail.jsp"%>
 			</c:when>
 			
 		</c:choose>
